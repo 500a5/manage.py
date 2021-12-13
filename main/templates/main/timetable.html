@@ -1,0 +1,17 @@
+{% extends 'main/layot.html' %}
+
+{% block title%}
+    Расписание занятий
+{% endblock %}
+
+{% block content%}
+    <div class="features" align="center">
+         <h1 align="center"  class="text">Расписание занятий </h1>
+            {% for el in timetable %}
+                <div class="alert alert-warning">
+                    <h3 class="text">{{ el.day }}</h3>
+                    <p class="text">{{  el.text}}</p>
+                </div>
+            {% endfor %}
+     </div>
+{% endblock %}
